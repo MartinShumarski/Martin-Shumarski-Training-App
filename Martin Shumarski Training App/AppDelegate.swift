@@ -7,6 +7,15 @@
 //
 
 import UIKit
+#if DEBUG
+import AdSupport
+#endif
+
+import Leanplum
+import RealmSwift
+import UserNotifications
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Leanplum.setAppId("app_3akJYWhfagBZwknwnvwUtImUqr3B0djmD3rTOqdapAw",
+                          withDevelopmentKey:"dev_K99NEDFANXO0t0HyoqyLaAFg1xb5o3XuzB3u9DnDdhU")
+        
+        Leanplum.start()
         return true
     }
 
@@ -41,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
 
 }
 

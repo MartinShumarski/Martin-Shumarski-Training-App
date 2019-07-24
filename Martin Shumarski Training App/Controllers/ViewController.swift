@@ -9,8 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+ 
+    
+    
+    
+    
+    @IBOutlet weak var userId: UITextField!
+    @IBOutlet weak var attributeName: UITextField!
+    @IBOutlet weak var attributeValue: UITextField!
+    @IBOutlet weak var eventName: UITextField!
+    @IBOutlet weak var eventValue: UITextField!
+    @IBOutlet weak var eventParameter: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

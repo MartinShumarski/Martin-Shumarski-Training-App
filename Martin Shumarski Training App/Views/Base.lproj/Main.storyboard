@@ -51,7 +51,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zch-MM-ZuI" userLabel="User ID Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-WJ-zmv" userLabel="UserID">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-WJ-zmv" userLabel="UserID">
                                                                 <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -75,13 +75,13 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zNk-NP-I5h" userLabel="Attribute Values Stack View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="267" height="68"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-8d-9yS" userLabel="Attribute Name">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Attribute Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-8d-9yS" userLabel="Attribute Name">
                                                                         <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmm-UY-xdO" userLabel="Attribute Value">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Attribute Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmm-UY-xdO" userLabel="Attribute Value">
                                                                         <rect key="frame" x="0.0" y="38" width="267" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -132,19 +132,19 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oRd-zy-G9a" userLabel="Event Values Stack View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="267" height="106"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-a5-tII" userLabel="Event Name">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-a5-tII" userLabel="Event Name">
                                                                         <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fHz-Rz-ikQ" userLabel="Event Value">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fHz-Rz-ikQ" userLabel="Event Value">
                                                                         <rect key="frame" x="0.0" y="38" width="267" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNP-Rm-Wmb" userLabel="Event Parameter">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Parameter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNP-Rm-Wmb" userLabel="Event Parameter">
                                                                         <rect key="frame" x="0.0" y="76" width="267" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -216,7 +216,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="attributeName" destination="BP8-8d-9yS" id="TfZ-5K-afL"/>
+                        <outlet property="attributeValue" destination="pmm-UY-xdO" id="xUQ-jY-elh"/>
+                        <outlet property="eventName" destination="4P3-a5-tII" id="dth-1H-vLy"/>
+                        <outlet property="eventParameter" destination="HNP-Rm-Wmb" id="085-P4-4Ah"/>
+                        <outlet property="eventValue" destination="fHz-Rz-ikQ" id="LMY-nE-4pv"/>
                         <outlet property="scrollView" destination="HJD-7r-MUd" id="KDc-Uu-atp"/>
+                        <outlet property="userId" destination="Xmi-WJ-zmv" id="xec-YH-Dsn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbe-Gv-pWX" userLabel="First Responder" sceneMemberID="firstResponder"/>

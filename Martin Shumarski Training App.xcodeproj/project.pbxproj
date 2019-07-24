@@ -12,9 +12,11 @@
 		4EF251DB22086C8A00E47A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF251D922086C8A00E47A7B /* Main.storyboard */; };
 		4EF251DD22086C8F00E47A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF251DC22086C8F00E47A7B /* Assets.xcassets */; };
 		4EF251E022086C8F00E47A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF251DE22086C8F00E47A7B /* LaunchScreen.storyboard */; };
+		EE0C05CD887CD684363C2A2F /* Pods_Martin_Shumarski_Training_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Martin_Shumarski_Training_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF251D222086C8A00E47A7B /* Martin Shumarski Training App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Martin Shumarski Training App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF251D522086C8A00E47A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF251D722086C8A00E47A7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		4EF251DC22086C8F00E47A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EF251DF22086C8F00E47A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EF251E122086C8F00E47A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828BE54CEACE87093B2E0F40 /* Pods-Martin Shumarski Training App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Martin Shumarski Training App.release.xcconfig"; path = "Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App.release.xcconfig"; sourceTree = "<group>"; };
+		BAFB2B5C67743D8157EE87C1 /* Pods-Martin Shumarski Training App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Martin Shumarski Training App.debug.xcconfig"; path = "Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,18 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0C05CD887CD684363C2A2F /* Pods_Martin_Shumarski_Training_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		197401E47CE420AF9D367E17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		323E1EC0F1100102C8A96FAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB2B5C67743D8157EE87C1 /* Pods-Martin Shumarski Training App.debug.xcconfig */,
+				828BE54CEACE87093B2E0F40 /* Pods-Martin Shumarski Training App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4EF251C922086C8A00E47A7B = {
 			isa = PBXGroup;
 			children = (
 				4EF251D422086C8A00E47A7B /* Martin Shumarski Training App */,
 				4EFB5E1A22E34AB0008E2C00 /* Supporting Files */,
 				4EF251D322086C8A00E47A7B /* Products */,
+				323E1EC0F1100102C8A96FAF /* Pods */,
+				197401E47CE420AF9D367E17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EF251E422086C8F00E47A7B /* Build configuration list for PBXNativeTarget "Martin Shumarski Training App" */;
 			buildPhases = (
+				CC9D13D7A22A5CD32AC70593 /* [CP] Check Pods Manifest.lock */,
 				4EF251CE22086C8A00E47A7B /* Sources */,
 				4EF251CF22086C8A00E47A7B /* Frameworks */,
 				4EF251D022086C8A00E47A7B /* Resources */,
+				E50EEA69A64CEED24D8C2D73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +187,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC9D13D7A22A5CD32AC70593 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Martin Shumarski Training App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E50EEA69A64CEED24D8C2D73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4EF251CE22086C8A00E47A7B /* Sources */ = {
@@ -245,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -300,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -312,15 +393,18 @@
 		};
 		4EF251E522086C8F00E47A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAFB2B5C67743D8157EE87C1 /* Pods-Martin Shumarski Training App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Martin Shumarski Training App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -330,11 +414,13 @@
 		};
 		4EF251E622086C8F00E47A7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 828BE54CEACE87093B2E0F40 /* Pods-Martin Shumarski Training App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Martin Shumarski Training App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
