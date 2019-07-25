@@ -63,6 +63,9 @@
                                                                 <state key="normal" title="Set UserID">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="changeUserID:" destination="NRW-8r-OyG" eventType="touchUpInside" id="M4k-P9-hdW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -95,6 +98,9 @@
                                                                 <state key="normal" title="Update Attribute">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="setUserAttributes:" destination="NRW-8r-OyG" eventType="touchUpInside" id="HeH-5Q-o0h"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
