@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var eventValue: UITextField!
     @IBOutlet weak var eventParameter: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var colorsLabel: UILabel!
     
     
     
@@ -30,6 +31,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUserIdPlaceholder()
+        self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
+        Leanplum.onVariablesChanged {
+            self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -89,7 +94,12 @@ class ViewController: UIViewController {
 //            self.attributeValue.resignFirstResponder()
         }
         
+    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
         
+        Leanplum.forceContentUpdate()
+        setUserIdPlaceholder()
+    }
+    
     }
     
     
