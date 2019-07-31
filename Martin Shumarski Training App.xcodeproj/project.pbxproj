@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Martin_Shumarski_Training_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E816BAD22EF5B73006E84B4 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Martin Shumarski Training App.entitlements"; sourceTree = "<group>"; };
 		4EF251D222086C8A00E47A7B /* Martin Shumarski Training App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Martin Shumarski Training App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF251D522086C8A00E47A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF251D722086C8A00E47A7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		4EF251D422086C8A00E47A7B /* Martin Shumarski Training App */ = {
 			isa = PBXGroup;
 			children = (
+				4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */,
 				4EF251D522086C8A00E47A7B /* AppDelegate.swift */,
 				4EFB5E1722E34A67008E2C00 /* Controllers */,
 				4EFB5E1822E34A87008E2C00 /* Data Model */,
@@ -157,6 +159,11 @@
 				TargetAttributes = {
 					4EF251D122086C8A00E47A7B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -400,6 +407,7 @@
 			baseConfigurationReference = BAFB2B5C67743D8157EE87C1 /* Pods-Martin Shumarski Training App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Martin Shumarski Training App/Martin Shumarski Training App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Martin Shumarski Training App/Info.plist";
@@ -421,6 +429,7 @@
 			baseConfigurationReference = 828BE54CEACE87093B2E0F40 /* Pods-Martin Shumarski Training App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Martin Shumarski Training App/Martin Shumarski Training App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Martin Shumarski Training App/Info.plist";

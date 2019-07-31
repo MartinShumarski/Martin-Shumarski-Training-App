@@ -27,10 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Variables.initLPVariables()
         
+        registerForPush()
+        Leanplum.setVerboseLoggingInDevelopmentMode(true)
         Leanplum.setAppId("app_3akJYWhfagBZwknwnvwUtImUqr3B0djmD3rTOqdapAw",
                           withDevelopmentKey:"dev_K99NEDFANXO0t0HyoqyLaAFg1xb5o3XuzB3u9DnDdhU")
         
         Leanplum.start()
+        
+        // IQ Keyboard manager - auto hide the keyboard
+        IQKeyboardManager.shared.enable = true
+
+        
         return true
     }
 
@@ -57,6 +64,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
+    func registerForPush () {
+        //iOS-10
+        if #available(iOS 10.0, *){
+            let userNotifCenter = UNUserNotificationCenter.current()
+            
+            userNotifCenter.requestAuthorization(options: [.badge,.alert,.sound]){ (granted,error) in
+                //Handle individual parts of the granting here.
+            }
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+//            //iOS 8-9
+//        else if #available(iOS 8.0, *){
+//            let settings = UIUserNotificationSettings.init(types: [UIUserNotificationType.alert,UIUserNotificationType.badge,UIUserNotificationType.sound],
+//                                                           categories: nil)
+//            UIApplication.shared.registerUserNotificationSettings(settings)
+//            UIApplication.shared.registerForRemoteNotifications()
+//        }
+//            //iOS 7
+//        else{
+//            UIApplication.shared.registerForRemoteNotifications(matching:
+//                [UIRemoteNotificationType.alert,
+//                 UIRemoteNotificationType.badge,
+//                 UIRemoteNotificationType.sound])
+//        }
+    
+
+    }
 
 }
-
