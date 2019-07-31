@@ -9,7 +9,7 @@
 import UIKit
 import Leanplum
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
  
     
     
@@ -32,9 +32,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUserIdPlaceholder()
         self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
+        
         Leanplum.onVariablesChanged {
             self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
         }
+        
+        self.userId.delegate = self
+        self.attributeName.delegate = self
+        self.attributeValue.delegate = self
+        self.eventName.delegate = self
+        self.eventValue.delegate = self
+        self.eventParameter.delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -93,18 +102,87 @@ class ViewController: UIViewController {
 //        DispatchQueue.main.async {
 //            self.attributeValue.resignFirstResponder()
         }
-        
+    
+    
+    // Refresh Button Pressed - forceContentUpdate
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
         
         Leanplum.forceContentUpdate()
         setUserIdPlaceholder()
     }
     
+
+
+//MARK : Track Events/Parameters
+
+    @IBAction func trackEventButtonPressed(_ sender: UIButton) {
+        
+        let nameCount = eventName.text?.count
+        let valueCount = eventValue.text?.count
+        let parameterCount = eventParameter.text?.count
+        let convEventValue = eventValue.text! as NSString
+        
+        let paramString = eventParameter.text!
+        let paramIndex = paramString.firstIndex(of: ",") ?? paramString.endIndex
+        let firstParam = paramString[..<paramIndex]
+        let secondParam = paramString[paramIndex...]
+        let secondParamString = secondParam.replacingOccurrences(of: ",", with: "")
+        
+        
+        let params : [String:Any] = [String(firstParam):secondParamString]
+        
+        if (nameCount != 0 && valueCount == 0 && parameterCount == 0) {
+            Leanplum.track(eventName.text)
+            
+        }
+        else if (nameCount != 0 && valueCount != 0 && parameterCount == 0) {
+                Leanplum.track(eventName.text, withValue: convEventValue.doubleValue)
+        }
+        
+        else if (nameCount != 0 && valueCount == 0 && parameterCount != 0) {
+            
+            Leanplum.track(eventName.text, withParameters: params)
+            
+        }
+        else if (nameCount != 0 && valueCount != 0 && parameterCount != 0) {
+            Leanplum.track(eventName.text, withValue: convEventValue.doubleValue, andParameters:params )
+            
+        }
+        
+        
+       
+        eventName.text = ""
+        eventValue.text = ""
+        eventParameter.text = ""
+        
+        
+        
+        
+        
     }
     
     
+    // MARK: Hide keyboard methods -
+    
+    
+    // Hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+    }
+    
+    
+    // Hide keyboard when return is pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+  
     
 
+    
+    
+}
 
 
 
