@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E816BAE22EF5B73006E84B4 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E816BAD22EF5B73006E84B4 /* Variables.swift */; };
+		4E816BB122F317EA006E84B4 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */; };
 		4EF251D622086C8A00E47A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF251D522086C8A00E47A7B /* AppDelegate.swift */; };
 		4EF251D822086C8A00E47A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF251D722086C8A00E47A7B /* ViewController.swift */; };
 		4EF251DB22086C8A00E47A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF251D922086C8A00E47A7B /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Martin_Shumarski_Training_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E816BAD22EF5B73006E84B4 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Martin Shumarski Training App.entitlements"; sourceTree = "<group>"; };
+		4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
 		4EF251D222086C8A00E47A7B /* Martin Shumarski Training App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Martin Shumarski Training App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF251D522086C8A00E47A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF251D722086C8A00E47A7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		4EFB5E1722E34A67008E2C00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */,
 				4EF251D722086C8A00E47A7B /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E816BB122F317EA006E84B4 /* InboxTableViewController.swift in Sources */,
 				4E816BAE22EF5B73006E84B4 /* Variables.swift in Sources */,
 				4EF251D822086C8A00E47A7B /* ViewController.swift in Sources */,
 				4EF251D622086C8A00E47A7B /* AppDelegate.swift in Sources */,

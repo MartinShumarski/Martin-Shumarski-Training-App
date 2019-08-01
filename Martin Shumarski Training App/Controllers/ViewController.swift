@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
         }
         
-        
+        // Set's the switch button to be Off on App Start
         switchButton.isOn = false
         
         self.userId.delegate = self
@@ -182,7 +182,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
   
-    
+    // MARK: Tracks a state on On and leave's the state on OFF
     @IBAction func switchChangedState(_ sender: UISwitch) {
         
         if sender.isOn {
