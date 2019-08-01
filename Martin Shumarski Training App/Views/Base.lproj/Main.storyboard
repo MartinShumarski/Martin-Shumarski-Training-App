@@ -118,7 +118,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RiN-Ex-jbo" userLabel="Switch Stack View">
                                                         <rect key="frame" x="0.0" y="178" width="355" height="31"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This switch tracks a state:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLf-DY-HkR" userLabel="This switch tracks a state:">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn ON to track a State" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLf-DY-HkR" userLabel="This switch tracks a state:">
                                                                 <rect key="frame" x="0.0" y="0.0" width="267" height="31"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -126,6 +126,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADh-XI-iYg">
                                                                 <rect key="frame" x="275" y="0.0" width="82" height="31"/>
+                                                                <connections>
+                                                                    <action selector="switchChangedState:" destination="NRW-8r-OyG" eventType="valueChanged" id="Rvj-fp-Dzh"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                         <constraints>
@@ -236,6 +239,7 @@
                         <outlet property="eventParameter" destination="HNP-Rm-Wmb" id="085-P4-4Ah"/>
                         <outlet property="eventValue" destination="fHz-Rz-ikQ" id="LMY-nE-4pv"/>
                         <outlet property="scrollView" destination="HJD-7r-MUd" id="KDc-Uu-atp"/>
+                        <outlet property="switchButton" destination="ADh-XI-iYg" id="DnN-OX-M9U"/>
                         <outlet property="userId" destination="Xmi-WJ-zmv" id="xec-YH-Dsn"/>
                     </connections>
                 </viewController>

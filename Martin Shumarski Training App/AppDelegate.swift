@@ -28,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Variables.initLPVariables()
         
         registerForPush()
+        
         Leanplum.setVerboseLoggingInDevelopmentMode(true)
+        
         Leanplum.setAppId("app_3akJYWhfagBZwknwnvwUtImUqr3B0djmD3rTOqdapAw",
                           withDevelopmentKey:"dev_K99NEDFANXO0t0HyoqyLaAFg1xb5o3XuzB3u9DnDdhU")
         

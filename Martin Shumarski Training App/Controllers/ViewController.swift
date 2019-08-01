@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var eventParameter: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var colorsLabel: UILabel!
+    @IBOutlet weak var switchButton: UISwitch!
     
     
     
@@ -36,6 +37,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         Leanplum.onVariablesChanged {
             self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
         }
+        
+        
+        switchButton.isOn = false
         
         self.userId.delegate = self
         self.attributeName.delegate = self
@@ -179,7 +183,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
   
     
-
+    @IBAction func switchChangedState(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            Leanplum.advance(to: "switchIsActivatedState", withInfo: "You have entered the state")
+        }
+        
+        else {
+            Leanplum.advance(to: nil)
+        }
+    }
+    
     
     
 }
