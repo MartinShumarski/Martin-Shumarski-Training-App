@@ -221,18 +221,12 @@
                         <viewLayoutGuide key="safeArea" id="Vi9-10-v58"/>
                     </view>
                     <navigationItem key="navigationItem" title="IchiNoApp" id="3ZY-za-RVF">
-                        <barButtonItem key="rightBarButtonItem" id="jnv-EZ-xGF">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PpV-iC-eXi">
-                                <rect key="frame" x="267" y="6" width="92" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Inbox">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VJy-I3-iNb" kind="show" id="jZo-FF-qDF"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="backBarButtonItem" title="Home" id="rK5-J6-bz4"/>
+                        <barButtonItem key="rightBarButtonItem" title="Inbox" id="JZ9-MV-k4Z" userLabel="InboxButtonLabel">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="VJy-I3-iNb" kind="show" id="DmE-t3-7Lk"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -242,6 +236,7 @@
                         <outlet property="eventName" destination="4P3-a5-tII" id="dth-1H-vLy"/>
                         <outlet property="eventParameter" destination="HNP-Rm-Wmb" id="085-P4-4Ah"/>
                         <outlet property="eventValue" destination="fHz-Rz-ikQ" id="LMY-nE-4pv"/>
+                        <outlet property="inboxButton" destination="JZ9-MV-k4Z" id="DB9-ee-nLy"/>
                         <outlet property="scrollView" destination="HJD-7r-MUd" id="KDc-Uu-atp"/>
                         <outlet property="switchButton" destination="ADh-XI-iYg" id="DnN-OX-M9U"/>
                         <outlet property="userId" destination="Xmi-WJ-zmv" id="xec-YH-Dsn"/>
@@ -260,7 +255,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InboxItemCell" id="7cv-aS-HYo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InboxMessageCell" id="7cv-aS-HYo">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7cv-aS-HYo" id="aEQ-TE-Ehq">

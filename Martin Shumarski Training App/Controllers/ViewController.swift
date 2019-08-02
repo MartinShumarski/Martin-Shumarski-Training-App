@@ -25,12 +25,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var colorsLabel: UILabel!
     @IBOutlet weak var switchButton: UISwitch!
     
+    @IBOutlet weak var inboxButton: UIBarButtonItem!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshInboxLabel()
         setUserIdPlaceholder()
         self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
         
@@ -56,6 +59,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         scrollView.contentSize = CGSize(width: 320, height: 968)
     }
 
+    //  MARK: Showing the number of unread messages in the inbox
+    func refreshInboxLabel () {
+        Leanplum.inbox()?.onChanged({
+            let unreadCount = Leanplum.inbox().unreadCount
+            let buttonTitle = "Inbox (\(unreadCount))"
+            self.navigationItem.rightBarButtonItem?.setValue(buttonTitle, forKey: "title")
+        })
+    }
+    
     // MARK: Sets placeholder for the userID text field
     func setUserIdPlaceholder () {
         var currentID : String = ""
