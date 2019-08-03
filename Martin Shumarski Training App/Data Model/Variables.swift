@@ -11,13 +11,13 @@ import Leanplum
 
 struct Variables {
     
-    static var orangeColor : LPVar?
-    static var greenColor : LPVar?
+    static var LabelColor : LPVar?
+
 
     
     static func initLPVariables () {
         
-        orangeColor = LPVar.define("colorsLabel", with: UIColor.white)
+        LabelColor = LPVar.define("colorsLabel", with: UIColor.white)
         
         
     }

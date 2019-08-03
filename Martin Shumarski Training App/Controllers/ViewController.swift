@@ -35,10 +35,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         refreshInboxLabel()
         setUserIdPlaceholder()
-        self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
+        self.colorsLabel.backgroundColor = Variables.LabelColor!.colorValue()
         
         Leanplum.onVariablesChanged {
-            self.colorsLabel.backgroundColor = Variables.orangeColor!.colorValue()
+            self.colorsLabel.backgroundColor = Variables.LabelColor!.colorValue()
         }
         
         // Set's the switch button to be Off on App Start
@@ -55,8 +55,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        
+        //Sets the
         scrollView.contentSize = CGSize(width: 320, height: 968)
+        
+        //Tracks  Nil State once viewAppears
+        Leanplum.advance(to: nil)
     }
 
     //  MARK: Showing the number of unread messages in the inbox
@@ -68,6 +71,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
+    //MARK: Prepare Segue to change the state
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToInboxSegue" {
+            Leanplum.advance(to: "App Inbox", withInfo: "User Enters the App Inbox")
+        }
+    }
+       
+
     // MARK: Sets placeholder for the userID text field
     func setUserIdPlaceholder () {
         var currentID : String = ""
@@ -194,7 +206,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
   
-    // MARK: Tracks a state on On and leave's the state on OFF
+    // MARK: Tracks a state on "ON" and leave's the state on "OFF"
     @IBAction func switchChangedState(_ sender: UISwitch) {
         
         if sender.isOn {

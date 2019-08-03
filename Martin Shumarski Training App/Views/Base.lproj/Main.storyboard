@@ -221,11 +221,16 @@
                         <viewLayoutGuide key="safeArea" id="Vi9-10-v58"/>
                     </view>
                     <navigationItem key="navigationItem" title="IchiNoApp" id="3ZY-za-RVF">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="rK5-J6-bz4"/>
+                        <barButtonItem key="backBarButtonItem" title="Home" id="rK5-J6-bz4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="homeButtonPressed:" destination="NRW-8r-OyG" id="7BC-4I-NBw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Inbox" id="JZ9-MV-k4Z" userLabel="InboxButtonLabel">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="VJy-I3-iNb" kind="show" id="DmE-t3-7Lk"/>
+                                <segue destination="VJy-I3-iNb" kind="show" identifier="goToInboxSegue" id="DmE-t3-7Lk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
