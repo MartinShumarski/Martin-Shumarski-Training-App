@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4754F422FC140900BD2407 /* LPMessageTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4754F322FC140900BD2407 /* LPMessageTemplates.m */; };
 		4E816BAE22EF5B73006E84B4 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E816BAD22EF5B73006E84B4 /* Variables.swift */; };
 		4E816BB122F317EA006E84B4 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */; };
 		4EF251D622086C8A00E47A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF251D522086C8A00E47A7B /* AppDelegate.swift */; };
@@ -19,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Martin_Shumarski_Training_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E4754F122FC140700BD2407 /* Martin Shumarski Training App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Martin Shumarski Training App-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E4754F222FC140900BD2407 /* LPMessageTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMessageTemplates.h; sourceTree = "<group>"; };
+		4E4754F322FC140900BD2407 /* LPMessageTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMessageTemplates.m; sourceTree = "<group>"; };
 		4E816BAD22EF5B73006E84B4 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Martin Shumarski Training App.entitlements"; sourceTree = "<group>"; };
 		4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
@@ -86,10 +90,13 @@
 			children = (
 				4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */,
 				4EF251D522086C8A00E47A7B /* AppDelegate.swift */,
+				4E4754F222FC140900BD2407 /* LPMessageTemplates.h */,
+				4E4754F322FC140900BD2407 /* LPMessageTemplates.m */,
 				4EFB5E1722E34A67008E2C00 /* Controllers */,
 				4EFB5E1822E34A87008E2C00 /* Data Model */,
 				4EFB5E1922E34A94008E2C00 /* Views */,
 				4EF251E122086C8F00E47A7B /* Info.plist */,
+				4E4754F122FC140700BD2407 /* Martin Shumarski Training App-Bridging-Header.h */,
 			);
 			path = "Martin Shumarski Training App";
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 				TargetAttributes = {
 					4EF251D122086C8A00E47A7B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -264,6 +272,7 @@
 				4E816BB122F317EA006E84B4 /* InboxTableViewController.swift in Sources */,
 				4E816BAE22EF5B73006E84B4 /* Variables.swift in Sources */,
 				4EF251D822086C8A00E47A7B /* ViewController.swift in Sources */,
+				4E4754F422FC140900BD2407 /* LPMessageTemplates.m in Sources */,
 				4EF251D622086C8A00E47A7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +420,7 @@
 			baseConfigurationReference = BAFB2B5C67743D8157EE87C1 /* Pods-Martin Shumarski Training App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Martin Shumarski Training App/Martin Shumarski Training App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
@@ -423,6 +433,8 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Martin Shumarski Training App/Martin Shumarski Training App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -433,6 +445,7 @@
 			baseConfigurationReference = 828BE54CEACE87093B2E0F40 /* Pods-Martin Shumarski Training App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Martin Shumarski Training App/Martin Shumarski Training App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
@@ -444,6 +457,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Martin Shumarski Training App/Martin Shumarski Training App-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
