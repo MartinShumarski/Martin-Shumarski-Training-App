@@ -59,12 +59,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         scrollView.contentSize = CGSize(width: 320, height: 968)
         
         //Tracks  Nil State once viewAppears
-        Leanplum.advance(to: nil)
+        Leanplum.advance(state: "null state")
     }
 
     //  MARK: Showing the number of unread messages in the inbox
     func refreshInboxLabel () {
-        Leanplum.inbox()?.onChanged({
+        Leanplum.inbox().onInboxChanged(completion: {
             let unreadCount = Leanplum.inbox().unreadCount
             let buttonTitle = "Inbox (\(unreadCount))"
             self.navigationItem.rightBarButtonItem?.setValue(buttonTitle, forKey: "title")
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToInboxSegue" {
-            Leanplum.advance(to: "App Inbox", withInfo: "User Enters the App Inbox")
+            Leanplum.advance(state: "App Inbox", info: "User Enters the App Inbox")
         }
     }
        
@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: Sets placeholder for the userID text field
     func setUserIdPlaceholder () {
         var currentID : String = ""
-        currentID = Leanplum.userId()
+        currentID = Leanplum.userId()!
         userId.placeholder = "userID: \(currentID)"
         
     }
@@ -93,9 +93,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func changeUserID(_ sender: UIButton) {
         
         if (userId.text?.count != 0) && (userId.text != Leanplum.userId()) {
-            Leanplum.setUserId(userId.text)
+            Leanplum.setUserId(userId.text!)
             setUserIdPlaceholder()
             userId.text = ""
+    
+          
             
             DispatchQueue.main.async {
                     self.userId.resignFirstResponder()
@@ -103,6 +105,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
             
         }
+        
+        Leanplum.setDeviceLocation(latitude: 0, longitude: 0, city: "(detect)" , region: "(detect)", country: "(detect)", type: .ip)
+        
         
     }
     
@@ -121,8 +126,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 Leanplum.setUserAttributes([newAttributeName:newAttributeValue])
             }
             
+            
             attributeValue.text = ""
             attributeName.text = ""
+            
             
         }
         
@@ -135,6 +142,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Refresh Button Pressed - forceContentUpdate
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
         
+        Leanplum.track("pop", params:["p":"true"])
+        Leanplum.track("jsonEvent", params:["jsonParams":"{\"lat\":13.7457329,\"lng\":100.5392942}"])
         Leanplum.forceContentUpdate()
         setUserIdPlaceholder()
     }
@@ -160,20 +169,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let params : [String:Any] = [String(firstParam):secondParamString]
         
         if (nameCount != 0 && valueCount == 0 && parameterCount == 0) {
-            Leanplum.track(eventName.text)
+            Leanplum.track(eventName.text!)
             
         }
         else if (nameCount != 0 && valueCount != 0 && parameterCount == 0) {
-                Leanplum.track(eventName.text, withValue: convEventValue.doubleValue)
+            Leanplum.track(eventName.text!, value: convEventValue.doubleValue)
         }
         
         else if (nameCount != 0 && valueCount == 0 && parameterCount != 0) {
             
-            Leanplum.track(eventName.text, withParameters: params)
+            Leanplum.track(eventName.text!, params: params)
             
         }
         else if (nameCount != 0 && valueCount != 0 && parameterCount != 0) {
-            Leanplum.track(eventName.text, withValue: convEventValue.doubleValue, andParameters:params )
+            Leanplum.track(eventName.text!, value: convEventValue.doubleValue, params:params )
             
         }
         
@@ -210,14 +219,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func switchChangedState(_ sender: UISwitch) {
         
         if sender.isOn {
-            Leanplum.advance(to: "switchIsActivatedState", withInfo: "You have entered the state")
+            Leanplum.advance(state: "switchIsActivatedState", info: "You have entered the state")
         }
         
         else {
-            Leanplum.advance(to: nil)
+            Leanplum.advance(state: "Null state", info: "This is the null state")
         }
     }
-    
     
     
 }

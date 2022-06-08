@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E4754F422FC140900BD2407 /* LPMessageTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4754F322FC140900BD2407 /* LPMessageTemplates.m */; };
 		4E816BAE22EF5B73006E84B4 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E816BAD22EF5B73006E84B4 /* Variables.swift */; };
 		4E816BB122F317EA006E84B4 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */; };
+		4EBDF9DC233E49690076A86F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDF9DB233E49690076A86F /* NotificationService.swift */; };
+		4EBDF9E0233E49690076A86F /* richPushExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EBDF9D9233E49690076A86F /* richPushExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4EF251D622086C8A00E47A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF251D522086C8A00E47A7B /* AppDelegate.swift */; };
 		4EF251D822086C8A00E47A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF251D722086C8A00E47A7B /* ViewController.swift */; };
 		4EF251DB22086C8A00E47A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF251D922086C8A00E47A7B /* Main.storyboard */; };
@@ -18,14 +19,39 @@
 		EE0C05CD887CD684363C2A2F /* Pods_Martin_Shumarski_Training_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4EBDF9DE233E49690076A86F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EF251CA22086C8A00E47A7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBDF9D8233E49690076A86F;
+			remoteInfo = richPushExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EBDF9E4233E49690076A86F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4EBDF9E0233E49690076A86F /* richPushExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		29ED92F1FAC2C94FCF1FFDB0 /* Pods_Martin_Shumarski_Training_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Martin_Shumarski_Training_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4754F122FC140700BD2407 /* Martin Shumarski Training App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Martin Shumarski Training App-Bridging-Header.h"; sourceTree = "<group>"; };
-		4E4754F222FC140900BD2407 /* LPMessageTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMessageTemplates.h; sourceTree = "<group>"; };
-		4E4754F322FC140900BD2407 /* LPMessageTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMessageTemplates.m; sourceTree = "<group>"; };
 		4E816BAD22EF5B73006E84B4 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Martin Shumarski Training App.entitlements"; sourceTree = "<group>"; };
 		4E816BB022F317EA006E84B4 /* InboxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
+		4EBDF9D9233E49690076A86F /* richPushExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = richPushExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBDF9DB233E49690076A86F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		4EBDF9DD233E49690076A86F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EF251D222086C8A00E47A7B /* Martin Shumarski Training App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Martin Shumarski Training App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF251D522086C8A00E47A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF251D722086C8A00E47A7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4EBDF9D6233E49690076A86F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EF251CF22086C8A00E47A7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,11 +99,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4EBDF9DA233E49690076A86F /* richPushExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4EBDF9DB233E49690076A86F /* NotificationService.swift */,
+				4EBDF9DD233E49690076A86F /* Info.plist */,
+			);
+			path = richPushExtension;
+			sourceTree = "<group>";
+		};
 		4EF251C922086C8A00E47A7B = {
 			isa = PBXGroup;
 			children = (
 				4EF251D422086C8A00E47A7B /* Martin Shumarski Training App */,
 				4EFB5E1A22E34AB0008E2C00 /* Supporting Files */,
+				4EBDF9DA233E49690076A86F /* richPushExtension */,
 				4EF251D322086C8A00E47A7B /* Products */,
 				323E1EC0F1100102C8A96FAF /* Pods */,
 				197401E47CE420AF9D367E17 /* Frameworks */,
@@ -81,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				4EF251D222086C8A00E47A7B /* Martin Shumarski Training App.app */,
+				4EBDF9D9233E49690076A86F /* richPushExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,8 +134,6 @@
 			children = (
 				4E816BAF22F1E51B006E84B4 /* Martin Shumarski Training App.entitlements */,
 				4EF251D522086C8A00E47A7B /* AppDelegate.swift */,
-				4E4754F222FC140900BD2407 /* LPMessageTemplates.h */,
-				4E4754F322FC140900BD2407 /* LPMessageTemplates.m */,
 				4EFB5E1722E34A67008E2C00 /* Controllers */,
 				4EFB5E1822E34A87008E2C00 /* Data Model */,
 				4EFB5E1922E34A94008E2C00 /* Views */,
@@ -138,6 +180,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4EBDF9D8233E49690076A86F /* richPushExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBDF9E3233E49690076A86F /* Build configuration list for PBXNativeTarget "richPushExtension" */;
+			buildPhases = (
+				4EBDF9D5233E49690076A86F /* Sources */,
+				4EBDF9D6233E49690076A86F /* Frameworks */,
+				4EBDF9D7233E49690076A86F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = richPushExtension;
+			productName = richPushExtension;
+			productReference = 4EBDF9D9233E49690076A86F /* richPushExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4EF251D122086C8A00E47A7B /* Martin Shumarski Training App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EF251E422086C8F00E47A7B /* Build configuration list for PBXNativeTarget "Martin Shumarski Training App" */;
@@ -147,10 +206,12 @@
 				4EF251CF22086C8A00E47A7B /* Frameworks */,
 				4EF251D022086C8A00E47A7B /* Resources */,
 				E50EEA69A64CEED24D8C2D73 /* [CP] Embed Pods Frameworks */,
+				4EBDF9E4233E49690076A86F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4EBDF9DF233E49690076A86F /* PBXTargetDependency */,
 			);
 			name = "Martin Shumarski Training App";
 			productName = "Martin Shumarski Training App";
@@ -167,6 +228,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Martin Shumarski";
 				TargetAttributes = {
+					4EBDF9D8233E49690076A86F = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					4EF251D122086C8A00E47A7B = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -179,7 +243,7 @@
 				};
 			};
 			buildConfigurationList = 4EF251CD22086C8A00E47A7B /* Build configuration list for PBXProject "Martin Shumarski Training App" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -192,11 +256,19 @@
 			projectRoot = "";
 			targets = (
 				4EF251D122086C8A00E47A7B /* Martin Shumarski Training App */,
+				4EBDF9D8233E49690076A86F /* richPushExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4EBDF9D7233E49690076A86F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EF251D022086C8A00E47A7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,24 +310,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework",
-				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Martin Shumarski Training App/Pods-Martin Shumarski Training App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,6 +324,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4EBDF9D5233E49690076A86F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBDF9DC233E49690076A86F /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EF251CE22086C8A00E47A7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,12 +339,19 @@
 				4E816BB122F317EA006E84B4 /* InboxTableViewController.swift in Sources */,
 				4E816BAE22EF5B73006E84B4 /* Variables.swift in Sources */,
 				4EF251D822086C8A00E47A7B /* ViewController.swift in Sources */,
-				4E4754F422FC140900BD2407 /* LPMessageTemplates.m in Sources */,
 				4EF251D622086C8A00E47A7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EBDF9DF233E49690076A86F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EBDF9D8233E49690076A86F /* richPushExtension */;
+			targetProxy = 4EBDF9DE233E49690076A86F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4EF251D922086C8A00E47A7B /* Main.storyboard */ = {
@@ -299,6 +373,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4EBDF9E1233E49690076A86F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				INFOPLIST_FILE = richPushExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp.richPushExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EBDF9E2233E49690076A86F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				INFOPLIST_FILE = richPushExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp.richPushExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4EF251E222086C8F00E47A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -419,10 +535,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAFB2B5C67743D8157EE87C1 /* Pods-Martin Shumarski Training App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Martin Shumarski Training App/Martin Shumarski Training App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Martin Shumarski Training App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -433,6 +552,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Martin Shumarski Training App/Martin Shumarski Training App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -444,10 +564,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 828BE54CEACE87093B2E0F40 /* Pods-Martin Shumarski Training App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Martin Shumarski Training App/Martin Shumarski Training App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Martin Shumarski Training App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -457,6 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.IchiNoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Martin Shumarski Training App/Martin Shumarski Training App-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4EBDF9E3233E49690076A86F /* Build configuration list for PBXNativeTarget "richPushExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBDF9E1233E49690076A86F /* Debug */,
+				4EBDF9E2233E49690076A86F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4EF251CD22086C8A00E47A7B /* Build configuration list for PBXProject "Martin Shumarski Training App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

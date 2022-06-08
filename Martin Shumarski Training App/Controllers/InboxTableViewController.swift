@@ -11,7 +11,7 @@ import Leanplum
 
 class InboxTableViewController: UITableViewController {
     
-    var inboxMessages : [LPInboxMessage] = []
+    var inboxMessages : [LeanplumInbox.Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,23 +28,26 @@ class InboxTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         
-        Leanplum.inbox().onChanged {
+        Leanplum.inbox().onInboxChanged {
             self.drawTable()
         }
-        
     }
     
     func drawTable(){
-        let inbox: LPInbox = Leanplum.inbox()
-        
-        self.inboxMessages = inbox.allMessages() as! [LPInboxMessage]
+        let inbox: LeanplumInbox = Leanplum.inbox()
+      
+//        let proKey = Leanplum.inbox().value(forKey: "pro")
+//        print(proKey!)
+        self.inboxMessages = inbox.allMessages as [LeanplumInbox.Message]
         
         // Re-sort the messages to newest first.
         self.inboxMessages.sort(by: { (message1, message2) -> Bool in
-            let first: Date = message1.deliveryTimestamp
-            let second: Date = message2.deliveryTimestamp
+            let first: Date = message1.deliveryTimestamp!
+            let second: Date = message2.deliveryTimestamp!
             return first > second
         })
+        
+        print("Inbox Count is + \(inboxMessages.count)")
         
         self.tableView.reloadSections(NSIndexSet.init(index: 0) as IndexSet, with: UITableView.RowAnimation.automatic)
     }
@@ -62,7 +65,7 @@ class InboxTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return Int(Leanplum.inbox().count())
+        return Int(Leanplum.inbox().count)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,10 +79,10 @@ class InboxTableViewController: UITableViewController {
         
             // Set the cell text and image
         
-            cell.textLabel?.text = message.title()
-            cell.detailTextLabel?.text = message.subtitle()
-        if(message.imageFilePath() != nil){
-            cell.imageView?.image = UIImage.init(contentsOfFile: message.imageFilePath())
+        cell.textLabel?.text = message.title
+        cell.detailTextLabel?.text = message.subtitle
+        if(message.imageFilePath != nil){
+            cell.imageView?.image = UIImage.init(contentsOfFile: message.imageFilePath!)
         }
         
         //Auto resize the cells
